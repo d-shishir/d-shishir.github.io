@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import emailjs from "emailjs-com";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { AlertSuccess } from "./success_alert";
 
 interface ContactFormProps {}
@@ -17,7 +17,7 @@ const Contact: React.FC<ContactFormProps> = () => {
 
   const SERVICE_ID = "service_fs68l0d";
   const TEMPLATE_ID = "template_n57zvwa";
-  const PUBLIC_KEY = "kZkwDh1C7ux74HXy-";
+  const PUBLIC_KEY = "ksfBfWD93EdzKrsTB";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -35,12 +35,14 @@ const Contact: React.FC<ContactFormProps> = () => {
     // Type assertion to specify the target as HTMLFormElement
     const form = e.target as HTMLFormElement;
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY).then(
-      (result: emailjs.EmailJSResponseStatus) => {
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, {
+      publicKey: PUBLIC_KEY,
+    }).then(
+      (result: EmailJSResponseStatus) => {
         console.log(result.text);
         setSubmitSuccess(true);
       },
-      (error: emailjs.EmailJSResponseStatus) => {
+      (error: EmailJSResponseStatus) => {
         console.log(error.text);
         alert("Something went wrong!");
       }

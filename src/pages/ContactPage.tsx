@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { SharedHeader } from "../components/SharedHeader";
 import "../hero.css";
 
@@ -12,7 +12,7 @@ export function ContactPage() {
 
   const SERVICE_ID = "service_fs68l0d";
   const TEMPLATE_ID = "template_n57zvwa";
-  const PUBLIC_KEY = "kZkwDh1C7ux74HXy-";
+  const PUBLIC_KEY = "ksfBfWD93EdzKrsTB";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,7 +24,9 @@ export function ContactPage() {
     setIsSubmitting(true);
     const form = e.target as HTMLFormElement;
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY);
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, {
+        publicKey: PUBLIC_KEY,
+      });
       setSubmitSuccess(true);
       form.reset();
       setFormData({ name: "", email: "", message: "" });
