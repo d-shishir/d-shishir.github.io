@@ -48,7 +48,7 @@ const education = [
     institution: "Ratna Rajyalaxmi Campus, Tribhuvan University",
     location: "Kathmandu, Nepal",
     points: [
-      "GPA: 3.5 / 4.0 — ranked in the top 10% of the class.",
+      "GPA: 3.47 / 4.0 — ranked in the top 10% of the class.",
       "Coursework: Software Engineering, Algorithms, Database Systems, Mobile & Web Development.",
     ],
   },
@@ -73,24 +73,34 @@ const skills = [
 
 const projects = [
   {
+    name: "Nepali Puran",
+    url: "play.google.com/store/apps/details?id=com.nepalipuran.app",
+    desc: "A digital library preserving Nepali religious texts. Features offline reading, smart bookmarks, and a privacy-first experience without ads or tracking.",
+  },
+  {
     name: "Baghchal Royale",
-    url: "github.com/d-shishir/Baghchal-Royale",
-    desc: "Full-stack digital version of the traditional Nepali board game. React Native frontend, FastAPI + PostgreSQL backend, with a Double Q-Learning AI opponent featuring 15+ dimensional state representation.",
+    url: "play.google.com/store/apps/details?id=com.baghchal.royale",
+    desc: "Digital version of the traditional Nepali board game. Features a Minimax-based AI opponent and offline multiplayer mode built with React Native.",
   },
   {
     name: "InsightStack",
     url: "github.com/d-shishir/InsightStack",
-    desc: "A React + Vite productivity and analytics web application.",
+    desc: "A modern productivity and analytics web application built with React and Vite, focusing on clean data visualisation.",
   },
   {
     name: "Finance Sathi",
     url: "github.com/d-shishir/Finanace-Sathi",
-    desc: "Personal finance management application to track expenses, income, and savings goals.",
+    desc: "Personal finance management app to track expenses, income, and savings goals with clear health analytics.",
   },
   {
     name: "Kanban Board",
     url: "github.com/d-shishir/Kanban-Board",
-    desc: "Modern drag-and-drop Kanban board with task management, priority tagging, and local persistence.",
+    desc: "Production-quality Kanban board with drag-and-drop task management, priority tagging, and local data persistence.",
+  },
+  {
+    name: "ShadeScape",
+    url: "github.com/d-shishir/ShadeScape",
+    desc: "A creative colour and theme exploration tool for designers to generate, preview, and export beautiful colour palettes.",
   },
 ];
 

@@ -26,9 +26,9 @@ const projects: Project[] = [
     id: 2,
     title: "Baghchal Royale",
     description:
-      "Full-stack digital adaptation of Baghchal — a traditional Nepali board game. Features a Double Q-Learning AI opponent with 15+ dimensional state representation, multiple difficulty levels, and real-time gameplay. React Native frontend with a FastAPI + PostgreSQL backend.",
-    techStack: ["React Native", "FastAPI", "PostgreSQL", "Python", "Expo"],
-    link: "https://github.com/d-shishir/Baghchal-Royale",
+      "A digital adaptation of Baghchal — the traditional Nepali board game. Optimized for an offline experience, it features a challenging AI powered by the Minimax algorithm and local multiplayer mode. Developed with React Native and Expo.",
+    techStack: ["React Native", "TypeScript", "Minimax AI", "Expo"],
+    link: "https://play.google.com/store/apps/details?id=com.baghchal.royale",
   },
   {
     id: 3,

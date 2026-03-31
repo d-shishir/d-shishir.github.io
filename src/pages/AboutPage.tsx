@@ -35,7 +35,7 @@ const timeline = [
     year: "2020 – 2025",
     role: "Bachelor of Computer Applications (BCA)",
     place: "Ratna Rajyalaxmi Campus, Tribhuvan University · Kathmandu",
-    desc: "GPA 3.5/4.0 — top 10% of class. Covered software engineering, algorithms, databases, and mobile/web development.",
+    desc: "GPA 3.47/4.0 — top 10% of class. Covered software engineering, algorithms, databases, and mobile/web development.",
   },
   {
     year: "Graduated 2020",
@@ -103,8 +103,8 @@ export function AboutPage() {
                 architecting backend systems for clients.
               </p>
               <p>
-                I hold a <strong>BCA from Tribhuvan University</strong> (GPA 3.5/4.0, top 10% of class).
-                Outside of code, I'm into software architecture, blockchain technology, open source, and sports.
+                I hold a <strong>BCA from Tribhuvan University</strong> (GPA 3.47/4.0, top 10% of class).
+                Outside of code, I'm into AI Content Creation, software architecture, blockchain technology, open source, and sports.
               </p>
             </div>
 
