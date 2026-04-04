@@ -58,8 +58,8 @@ const projects: Project[] = [
     id: 6,
     title: "ShadeScape",
     description:
-      "A creative colour and theme exploration tool for designers and developers to generate, preview, and export beautiful colour palettes.",
-    techStack: ["React", "TypeScript"],
+      "A creative wallpaper and theme exploration application that allows users to generate, preview, and export beautiful aesthetic backgrounds and palettes.",
+    techStack: ["React", "TypeScript", "Vite"],
     link: "https://github.com/d-shishir/ShadeScape",
   },
 ];
@@ -86,7 +86,7 @@ export function ProjectsPage() {
             <span className="projects-title-line italic">Work</span>
           </h1>
           <p className="projects-subtitle">
-            A collection of things I've built — mobile apps, web tools, AI systems, and experiments.
+            A collection of technical projects and AI cinematic works — ranging from mobile apps and web tools to elite-tier AI video creations.
           </p>
         </motion.div>
 

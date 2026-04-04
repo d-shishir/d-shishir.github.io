@@ -35,7 +35,7 @@ function About() {
               <strong> scalable and high-performance applications</strong>. I
               specialize in{" "}
               <strong>
-                React, React Native, FastAPI, Django, PostgreSQL,{" "}
+                React, React Native, Node.js, FastAPI, Django, PostgreSQL,{" "}
               </strong>
               and <strong>cloud technologies</strong> to build impactful
               solutions.

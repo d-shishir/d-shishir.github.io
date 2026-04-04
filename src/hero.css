@@ -1773,3 +1773,36 @@ a.resume-contact-item:hover {
   line-height: 1.75;
   font-weight: 300;
 }
+
+/* Resume Profile Toggle */
+.resume-profile-toggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.toggle-pill {
+  display: inline-flex;
+  background: #eaeaea;
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 500;
+}

@@ -369,7 +369,7 @@ export function HeroPortfolio() {
       <div ref={nameRef} className="hero-name">
         <span className="hero-name-first">Shishir</span>
         <span className="hero-name-last">Lamichhane</span>
-        <span className="hero-name-sub">Software Engineer</span>
+        <span className="hero-name-sub">Software Engineer & Kling AI Elite Creator</span>
       </div>
 
       {/* Top-right: Nav (removed F1 Records) */}

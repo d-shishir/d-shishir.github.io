@@ -6,9 +6,10 @@ import { SharedHeader } from "../components/SharedHeader";
 const skills = [
   { category: "Languages", items: ["JavaScript", "TypeScript", "Python"] },
   { category: "Frontend", items: ["React", "React Native", "Expo"] },
-  { category: "Backend", items: ["Django", "FastAPI", "RESTful APIs"] },
+  { category: "Backend", items: ["Node.js", "Django", "FastAPI", "RESTful APIs"] },
   { category: "State & Data", items: ["Redux", "Context API", "SQL", "NoSQL"] },
   { category: "Tools", items: ["Git", "CI/CD", "Linux", "macOS", "Windows"] },
+  { category: "AI & Vibe Coding", items: ["Antigravity", "Claude Code", "Cursor", "Prompt Engineering"] },
   { category: "Practices", items: ["Agile", "Remote Work", "Technical Support", "Debugging"] },
 ];
 
@@ -104,7 +105,9 @@ export function AboutPage() {
               </p>
               <p>
                 I hold a <strong>BCA from Tribhuvan University</strong> (GPA 3.47/4.0, top 10% of class).
-                Outside of code, I'm into AI Content Creation, software architecture, blockchain technology, open source, and sports.
+                Outside of code, I am a recognized member of the <strong>Kling AI Elite Creators Program (ECP)</strong>, 
+                specializing in high-tier AI video generation and cinematic storytelling. I'm also into 
+                software architecture, blockchain technology, open source, and sports.
               </p>
             </div>
 
