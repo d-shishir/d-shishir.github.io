@@ -2,7 +2,7 @@ import { Alert } from "@/components/ui/alert";
 
 function AlertSuccess() {
   return (
-    <Alert layout="row">
+    <Alert>
       <p className="text-sm">Message sent successfully!</p>
     </Alert>
   );

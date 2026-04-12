@@ -3,24 +3,28 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export interface GooeyLoaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Primary color for the goo effect. Defaults to theme --primary (HSL components). */
+  /** Primary color for the goo effect. Defaults to `var(--primary)` (oklch in this theme). */
   primaryColor?: string;
-  /** Secondary color for the goo effect. Defaults to theme --secondary. */
+  /** Secondary color for the goo effect. Defaults to `var(--secondary)`. */
   secondaryColor?: string;
-  /** Bottom border color. Defaults to theme --border. */
+  /** Bottom border color. Defaults to `var(--border)`. */
   borderColor?: string;
 }
 
 const GooeyLoader = React.forwardRef<HTMLDivElement, GooeyLoaderProps>(
-  ({ className, primaryColor, secondaryColor, borderColor, ...props }, ref) => {
+  (
+    { className, primaryColor, secondaryColor, borderColor, style: styleProp, ...props },
+    ref,
+  ) => {
     const uid = React.useId().replace(/:/g, "");
     const filterId = `gooey-loader-filter-${uid}`;
     const loaderClass = `gooey-loader-el-${uid}`;
 
     const style = {
-      "--gooey-primary-color": primaryColor ?? "hsl(var(--primary))",
-      "--gooey-secondary-color": secondaryColor ?? "hsl(var(--secondary))",
-      "--gooey-border-color": borderColor ?? "hsl(var(--border))",
+      ...styleProp,
+      "--gooey-primary-color": primaryColor ?? "var(--primary)",
+      "--gooey-secondary-color": secondaryColor ?? "var(--secondary)",
+      "--gooey-border-color": borderColor ?? "var(--border)",
     } as React.CSSProperties;
 
     return (
@@ -91,6 +95,20 @@ const GooeyLoader = React.forwardRef<HTMLDivElement, GooeyLoaderProps>(
             @keyframes gooey-loader-wee2-${uid} {
               0% { transform: translateX(-8em) rotate(0deg); }
               100% { transform: translateX(8em) rotate(180deg); }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .${loaderClass}::before,
+              .${loaderClass}::after {
+                animation: none;
+                transform: translateX(0) rotate(0deg);
+              }
+              .${loaderClass}::before {
+                opacity: 0.9;
+              }
+              .${loaderClass}::after {
+                opacity: 0.65;
+              }
             }
           `}
         </style>

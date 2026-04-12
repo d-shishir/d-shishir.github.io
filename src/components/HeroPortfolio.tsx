@@ -426,10 +426,10 @@ export function HeroPortfolio() {
         <GooeyLoader
           role="presentation"
           aria-hidden
-          className="text-[clamp(11px,2.2vmin,15px)] opacity-[0.95]"
-          primaryColor="rgba(255, 255, 255, 0.92)"
-          secondaryColor="rgba(255, 255, 255, 0.4)"
-          borderColor="rgba(255, 255, 255, 0.2)"
+          className="text-[clamp(11px,2.2vmin,15px)] opacity-[0.97]"
+          primaryColor="var(--hero-goo-primary)"
+          secondaryColor="var(--hero-goo-secondary)"
+          borderColor="var(--hero-goo-border)"
         />
       </div>
 
