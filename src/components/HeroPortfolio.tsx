@@ -1,5 +1,6 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { GooeyLoader } from "@/components/ui/loader-10";
 import "../hero.css";
 
 interface TrailPoint {
@@ -18,6 +19,7 @@ const PARALLAX_STRENGTH = 6;
 
 export function HeroPortfolio() {
   const navigate = useNavigate();
+  const [heroVisualReady, setHeroVisualReady] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const img1Ref = useRef<HTMLImageElement | null>(null);
   const img2Ref = useRef<HTMLImageElement | null>(null);
@@ -45,6 +47,9 @@ export function HeroPortfolio() {
 
   const gridOffsetX = useRef(0);
   const gridOffsetY = useRef(0);
+
+  const parallaxRafId = useRef<number | null>(null);
+  const pendingParallax = useRef({ clientX: 0, clientY: 0 });
 
   const drawFrame = useCallback(() => {
     const canvas = canvasRef.current;
@@ -238,6 +243,23 @@ export function HeroPortfolio() {
     // Define loadImages strictly internally so resize can use it
     const loadImages = () => {
       imagesLoaded.current = 0;
+      setHeroVisualReady(false);
+      let settled = 0;
+
+      const revealWhenDecoded = () => {
+        settled++;
+        if (settled < 2) return;
+        const a = img1Ref.current;
+        const b = img2Ref.current;
+        const decode = (img: HTMLImageElement | null) =>
+          img?.complete && img.naturalWidth > 0
+            ? img.decode().catch(() => undefined)
+            : Promise.resolve();
+        void Promise.all([decode(a), decode(b)]).then(() => {
+          setHeroVisualReady(true);
+        });
+      };
+
       const isPortrait = window.innerHeight > window.innerWidth;
       const base = import.meta.env.BASE_URL;
       const img1Src = isPortrait ? `${base}hero-1.png` : `${base}oldhero-1.png`;
@@ -245,12 +267,40 @@ export function HeroPortfolio() {
 
       const i1 = new Image();
       const i2 = new Image();
+      i1.decoding = "async";
+      i2.decoding = "async";
       i1.src = img1Src;
       i2.src = img2Src;
       img1Ref.current = i1;
       img2Ref.current = i2;
-      i1.onload = () => { imagesLoaded.current++; };
-      i2.onload = () => { imagesLoaded.current++; };
+      i1.onload = () => {
+        imagesLoaded.current++;
+        revealWhenDecoded();
+      };
+      i2.onload = () => {
+        imagesLoaded.current++;
+        revealWhenDecoded();
+      };
+      i1.onerror = () => {
+        revealWhenDecoded();
+      };
+      i2.onerror = () => {
+        revealWhenDecoded();
+      };
+    };
+
+    const flushParallax = () => {
+      parallaxRafId.current = null;
+      const clientX = pendingParallax.current.clientX;
+      const clientY = pendingParallax.current.clientY;
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      const px = ((clientX - cx) / cx) * -PARALLAX_STRENGTH;
+      const py = ((clientY - cy) / cy) * -PARALLAX_STRENGTH;
+      if (nameRef.current) nameRef.current.style.transform = `translate(${px}px, ${py}px)`;
+      if (navRef.current) navRef.current.style.transform = `translate(${px * 0.6}px, ${py * 0.6}px)`;
+      if (socialRef.current) socialRef.current.style.transform = `translate(${px * 0.8}px, ${py * 0.8}px)`;
+      if (bottomNavRef.current) bottomNavRef.current.style.transform = `translate(${px * 0.7}px, ${py * 0.7}px)`;
     };
 
     function resize() {
@@ -324,15 +374,11 @@ export function HeroPortfolio() {
       mouseX.current = clientX;
       mouseY.current = clientY;
 
-      // Parallax UI
-      const cx = window.innerWidth / 2;
-      const cy = window.innerHeight / 2;
-      const px = ((clientX - cx) / cx) * -PARALLAX_STRENGTH;
-      const py = ((clientY - cy) / cy) * -PARALLAX_STRENGTH;
-      if (nameRef.current) nameRef.current.style.transform = `translate(${px}px, ${py}px)`;
-      if (navRef.current) navRef.current.style.transform = `translate(${px * 0.6}px, ${py * 0.6}px)`;
-      if (socialRef.current) socialRef.current.style.transform = `translate(${px * 0.8}px, ${py * 0.8}px)`;
-      if (bottomNavRef.current) bottomNavRef.current.style.transform = `translate(${px * 0.7}px, ${py * 0.7}px)`;
+      pendingParallax.current.clientX = clientX;
+      pendingParallax.current.clientY = clientY;
+      if (parallaxRafId.current === null) {
+        parallaxRafId.current = requestAnimationFrame(flushParallax);
+      }
     }
     
     // Mouse events (hover desktop)
@@ -350,6 +396,10 @@ export function HeroPortfolio() {
     animId.current = requestAnimationFrame(drawFrame);
 
     return () => {
+      if (parallaxRafId.current !== null) {
+        cancelAnimationFrame(parallaxRafId.current);
+        parallaxRafId.current = null;
+      }
       cancelAnimationFrame(animId.current);
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", onInteractMove);
@@ -364,6 +414,24 @@ export function HeroPortfolio() {
   return (
     <div className="hero-root">
       <canvas ref={canvasRef} className="hero-canvas" />
+      <div
+        className={`hero-loader${heroVisualReady ? " hero-loader--hidden" : ""}`}
+        aria-hidden={heroVisualReady}
+        aria-busy={!heroVisualReady}
+        role="status"
+      >
+        <span className="hero-loader-sr">
+          {heroVisualReady ? "" : "Loading portfolio visuals"}
+        </span>
+        <GooeyLoader
+          role="presentation"
+          aria-hidden
+          className="text-[clamp(11px,2.2vmin,15px)] opacity-[0.95]"
+          primaryColor="rgba(255, 255, 255, 0.92)"
+          secondaryColor="rgba(255, 255, 255, 0.4)"
+          borderColor="rgba(255, 255, 255, 0.2)"
+        />
+      </div>
 
       {/* Top-left: Name */}
       <div ref={nameRef} className="hero-name">

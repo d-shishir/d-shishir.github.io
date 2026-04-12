@@ -82,7 +82,16 @@ export function AboutPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <img src={`${import.meta.env.BASE_URL}oldhero-1.png`} alt="Shishir Lamichhane" className="about-portrait-img" />
+                <img
+                  src={`${import.meta.env.BASE_URL}oldhero-1.png`}
+                  alt="Shishir Lamichhane"
+                  className="about-portrait-img"
+                  width={150}
+                  height={150}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
               </motion.div>
             </div>
             <div className="about-portrait-caption-new">Shishir Lamichhane · Kathmandu, Nepal</div>
