@@ -15,6 +15,14 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Ramailo Sikai",
+    description:
+      "An interactive learning application for children to learn Nepali and English alphabets, numbers, animals, and colors. Built to make early education engaging and fun.",
+    techStack: ["ReactNative", "Expo", "JavaScript"],
+    link: "https://play.google.com/store/apps/details?id=com.ramailo.sikai",
+  },
+  {
+    id: 2,
     title: "Vedastra: Astrology Communication Mobile App",
     description:
       "A mobile application built with React Native for astrology communication. It allows users to get astrology readings, communicate with astrologers, and track their daily horoscope.",
@@ -22,7 +30,7 @@ const projects: Project[] = [
     link: "https://github.com/d-shishir/Vedastra",
   },
   {
-    id: 2,
+    id: 3,
     title: "Stock Portfolio Management System",
     description:
       "A PHP-based system for managing stock portfolios, allowing users to track their investments, analyze trends, and manage assets efficiently.",
@@ -30,7 +38,7 @@ const projects: Project[] = [
     link: "https://github.com/dshishir13/Stock-Portfolio-Management-System",
   },
   {
-    id: 3,
+    id: 4,
     title: "Job Portal",
     description:
       "A job portal application built using React Native that allows users to browse job listings, apply for positions, and track their job search.",

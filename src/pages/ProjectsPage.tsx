@@ -16,6 +16,14 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Ramailo Sikai",
+    description:
+      "An interactive learning application for children to learn Nepali and English alphabets, numbers, animals, and colors. Features immersive 3D-styled assets and offline learning to make early education engaging for kids.",
+    techStack: ["React Native", "Expo", "JavaScript"],
+    link: "https://play.google.com/store/apps/details?id=com.ramailo.sikai",
+  },
+  {
+    id: 2,
     title: "Nepali Puran",
     description:
       "A digital library preserving Nepali religious texts and holy scriptures. Features the complete Shree Swostani Brata Katha and Bhagavad Gita with dark/light mode, smart bookmarks, and 100% offline reading. Privacy-first with no ads or tracking.",
@@ -23,7 +31,7 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.nepalipuran.app",
   },
   {
-    id: 2,
+    id: 3,
     title: "Baghchal Royale",
     description:
       "A digital adaptation of Baghchal — the traditional Nepali board game. Optimized for an offline experience, it features a challenging AI powered by the Minimax algorithm and local multiplayer mode. Developed with React Native and Expo.",
@@ -31,7 +39,7 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.baghchal.royale",
   },
   {
-    id: 3,
+    id: 4,
     title: "InsightStack",
     description:
       "A modern productivity and analytics web application built with React and Vite. Focuses on clean data visualisation and an intuitive user experience.",
@@ -39,7 +47,7 @@ const projects: Project[] = [
     link: "https://github.com/d-shishir/InsightStack",
   },
   {
-    id: 4,
+    id: 5,
     title: "Finance Sathi",
     description:
       "Personal finance management app to track expenses, income, and savings goals. Designed to give users a clear picture of their financial health at a glance.",
@@ -47,7 +55,7 @@ const projects: Project[] = [
     link: "https://github.com/d-shishir/Finanace-Sathi",
   },
   {
-    id: 5,
+    id: 6,
     title: "Kanban Board",
     description:
       "A production-quality Kanban board with drag-and-drop task management, priority tagging, due dates, search & filtering, and local data persistence.",
@@ -55,7 +63,7 @@ const projects: Project[] = [
     link: "https://github.com/d-shishir/Kanban-Board",
   },
   {
-    id: 6,
+    id: 7,
     title: "ShadeScape",
     description:
       "A creative wallpaper and theme exploration application that allows users to generate, preview, and export beautiful aesthetic backgrounds and palettes.",
