@@ -55,7 +55,7 @@ const aiExperience = [
       "Leveraging vibe coding methodologies and advanced AI tools to rapidly prototype and develop cross-platform applications.",
       "Expertly utilizing agentic development environments including Antigravity, Claude Code, and Cursor to accelerate development cycles and maintain high code quality.",
       "Part of the Kling AI Elite Creators Program (ECP), recognized for high-tier generative AI content creation and cinematic video production.",
-      "Handling multiple AI-focused social media accounts (ramailo.ai, swapcult, bhaktijyotika), producing 100% AI-generated visual content.",
+      "Handling multiple AI-focused social media accounts (ramailo.ai, bhaktijyotika), producing 100% AI-generated visual content.",
       "Producing cinematic AI videos using Kling, Google Veo 3, and Higgsfield; alongside Nano Banana and ComfyUI for image creation.",
       "Designing full-stack software solutions while integrating ElevenLabs and automation workflows into generative AI content pipelines.",
     ],
@@ -167,11 +167,6 @@ const aiProjects = [
     name: "Bhakti Jyotika",
     url: "instagram.com/bhaktijyotika",
     desc: "Creative AI-generated content focusing on cultural and spiritual themes, published across Instagram and TikTok.",
-  },
-  {
-    name: "Swapcult",
-    url: "x.com/swapcult",
-    desc: "Managed AI-driven X channel featuring 100% self-generated art, cinematic videos, and experimental visual concepts for a high-engagement community.",
   },
 ];
 
