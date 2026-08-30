@@ -158,13 +158,13 @@ const sweProjects = [
 const aiProjects = [
   {
     name: "Ramailo AI — AI Entertainment & Creative Media",
-    url: "tiktok.com/@ramailo.ai",
+    url: "instagram.com/ramailo.ai",
     desc: "AI-first creative brand producing fully AI-generated entertainment, cinematic shorts, character-driven stories, comedy, and experimental visual content. Multi-platform presence across TikTok, Instagram, and Facebook with 100K+ followers and millions of views.",
   },
   {
-    name: "Bhakti Jyotika — AI Cultural & Spiritual Media",
-    url: "instagram.com/bhaktijyotika",
-    desc: "AI-generated creative content focused on cultural, spiritual, and visually driven storytelling across social platforms.",
+    name: "Cute Animal Circle — AI Visuals & Media",
+    url: "instagram.com/cuteanimalcircle",
+    desc: "Creative AI-generated content focusing on cute animal AI visuals, animations, dance, and viral short-form storytelling across social platforms.",
   },
 ];
 
