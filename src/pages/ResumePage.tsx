@@ -48,38 +48,22 @@ const sweExperience = [
 const aiExperience = [
   {
     period: "May 2025 – Present",
-    title: "Freelance Software Engineer & Generative AI Expert",
+    title: "AI Creative & AI Filmmaker",
     company: "Self-employed",
     location: "Remote",
     points: [
-      "Leveraging vibe coding methodologies and advanced AI tools to rapidly prototype and develop cross-platform applications.",
-      "Expertly utilizing agentic development environments including Antigravity, Claude Code, and Cursor to accelerate development cycles and maintain high code quality.",
-      "Part of the Kling AI Elite Creators Program (ECP), recognized for high-tier generative AI content creation and cinematic video production.",
-      "Handling multiple AI-focused social media accounts (ramailo.ai, bhaktijyotika), producing 100% AI-generated visual content.",
-      "Producing cinematic AI videos using Kling, Google Veo 3, and Higgsfield; alongside Nano Banana and ComfyUI for image creation.",
-      "Designing full-stack software solutions while integrating ElevenLabs and automation workflows into generative AI content pipelines.",
-    ],
-  },
-  {
-    period: "Apr 2023 – May 2025",
-    title: "Jr. Software Engineer (Part Time)",
-    company: "GivingbackAI",
-    location: "Remote · United States",
-    points: [
-      "Incorporated AI-assisted debugging and technical troubleshooting to efficiently investigate client-reported system behaviours.",
-      "Focused on software design and development while concurrently handling technical customer support, optimising resolution times.",
-      "Assisted in pre-deployment testing and issue escalation by utilizing intelligent log analysis and creating reproducible steps.",
-    ],
-  },
-  {
-    period: "2020 – 2023",
-    title: "Freelance · Social Media Management & Digital Marketing",
-    company: "Self-employed",
-    location: "Remote",
-    points: [
-      "Managed social media accounts and executed digital marketing strategies globally across multiple platforms.",
-      "Developed foundational skills in content creation, prompt engineering, and large-scale audience engagement.",
-      "Explored early generative AI tools to optimise client presence through targeted organic campaigns and metrics analysis.",
+      "Create cinematic AI short films, narrative shorts, character-driven stories, and episodic/series concepts using generative AI as a primary creative and production medium.",
+      "Develop end-to-end AI filmmaking workflows covering concept development, story structure, visual development, storyboarding, shot design, cinematography, character consistency, motion, dialogue, and sound.",
+      "Work with the latest generation of AI video, image, audio, and multimodal models, continuously evaluating emerging tools and integrating the strongest capabilities into production workflows.",
+      "Create fully AI-generated content spanning comedy, action, emotional storytelling, cultural themes, experimental concepts, and cinematic narratives.",
+      "Utilize advanced workflows including text-to-video, image-to-video, reference-based generation, character consistency, motion control, choreography, and multimodal generation.",
+      "Direct AI-generated scenes with attention to camera language, composition, lighting, pacing, continuity, character performance, and visual storytelling.",
+      "Produce short-form content optimized for audience retention, engagement, shareability, and viral distribution across TikTok, Instagram, Facebook, and other platforms.",
+      "Recognized member of the Kling AI Elite Creators Program (ECP) for advanced generative AI content creation and cinematic production.",
+      "Participate in creator/CPP programs with Kinovi AI, OiiOii AI, HappyHorse AI, Pollo AI, Flova AI, and ImagineArt.",
+      "Experiment with newly released AI models and production techniques, adapting creative workflows as generative AI capabilities rapidly evolve.",
+      "Manage AI-focused social media brands and develop original concepts, recurring characters, and narrative formats for digital audiences.",
+      "Built a combined social media audience of 100K+ followers, with individual AI productions reaching millions of views.",
     ],
   },
 ];
@@ -115,13 +99,27 @@ const sweSkills = [
   { label: "AI & Vibe Coding", value: "Antigravity, Claude Code, Cursor, Replit Agent, v0" },
 ];
 
-const aiSkills = [
-  { label: "AI Video", value: "Kling, Google Veo 3, Higgsfield, Luma" },
-  { label: "AI Image & Workflows", value: "Nano Banana, ComfyUI, Midjourney" },
-  { label: "AI Audio", value: "ElevenLabs" },
-  { label: "Social Platforms", value: "TikTok, Instagram, Facebook, X (Twitter)" },
-  { label: "Vibe Coding Tools", value: "Antigravity, Claude Code, Cursor, Replit Agent" },
-  { label: "Software Background", value: "TypeScript, Python, Node.js, React, Django" },
+const aiCapabilities = [
+  { label: "AI Filmmaking", value: "Cinematic storytelling · Short films · AI series · Narrative development · Storyboarding · Shot design · Cinematography · Visual direction · Character development · World building" },
+  { label: "AI Video Production", value: "Text-to-video · Image-to-video · Reference-based generation · Character consistency · Motion control · Choreography · Multi-shot storytelling · Cinematic camera direction" },
+  { label: "AI Image & Visual Development", value: "Character design · Environment design · Concept art · Visual development · Generative image workflows · Image-to-video pipelines" },
+  { label: "AI Audio & Voice", value: "AI voice generation · Character dialogue · Voice direction · Audio-driven creative workflows" },
+  { label: "Creative Direction", value: "Concept development · Story structure · Visual language · Composition · Lighting · Pacing · Continuity · Performance direction · Creative experimentation" },
+  { label: "Social Content", value: "TikTok · Instagram · Facebook · X · Short-form storytelling · Audience retention · Viral content strategy · Content ideation · Social analytics" },
+];
+
+const aiToolsAndModels = [
+  { label: "AI Video", value: "Kling · Google Veo · Hailuo · Seedance · Wan · Higgsfield · Luma · Other emerging video-generation models" },
+  { label: "AI Image & Visuals", value: "Nano Banana · Midjourney · ComfyUI · Other generative image workflows" },
+  { label: "AI Audio", value: "ElevenLabs · AI voice generation · AI-assisted audio workflows" },
+  { label: "Creative AI Workflows", value: "Prompt engineering · Multimodal workflows · Reference-based generation · Model evaluation · AI production pipelines · Rapid creative iteration" },
+];
+
+const technicalBackground = [
+  { label: "Programming", value: "TypeScript · JavaScript · Python" },
+  { label: "Frontend", value: "React · React Native · Expo" },
+  { label: "Backend", value: "Node.js · Django · FastAPI · REST APIs" },
+  { label: "AI-Assisted Development", value: "Claude Code · Cursor · Antigravity · Replit Agent · v0" },
 ];
 
 const sweProjects = [
@@ -159,14 +157,25 @@ const sweProjects = [
 
 const aiProjects = [
   {
-    name: "ramailo.ai",
+    name: "Ramailo AI — AI Entertainment & Creative Media",
     url: "tiktok.com/@ramailo.ai",
-    desc: "Fully AI-generated content channel focusing on high-quality video shorts and graphics. Also active on Instagram and Facebook.",
+    desc: "AI-first creative brand producing fully AI-generated entertainment, cinematic shorts, character-driven stories, comedy, and experimental visual content. Multi-platform presence across TikTok, Instagram, and Facebook with 100K+ followers and millions of views.",
   },
   {
-    name: "Bhakti Jyotika",
+    name: "Bhakti Jyotika — AI Cultural & Spiritual Media",
     url: "instagram.com/bhaktijyotika",
-    desc: "Creative AI-generated content focusing on cultural and spiritual themes, published across Instagram and TikTok.",
+    desc: "AI-generated creative content focused on cultural, spiritual, and visually driven storytelling across social platforms.",
+  },
+];
+
+const creatorCollaborations = [
+  {
+    title: "Kling AI — Elite Creators Program (ECP)",
+    desc: "Selected member of the Kling AI Elite Creators Program, producing advanced AI-generated content and cinematic productions while exploring emerging video-generation capabilities.",
+  },
+  {
+    title: "Creator / CPP Programs",
+    desc: "Kinovi AI · OiiOii AI · HappyHorse AI · Pollo AI · Flova AI · ImagineArt — Collaborating with emerging AI platforms and creator programs to explore new generative models, creative workflows, and applications of AI in visual storytelling.",
   },
 ];
 
@@ -183,9 +192,7 @@ export function ResumePage() {
   const [profile, setProfile] = useState<ProfileType>("swe");
 
   const currentExperience = profile === "swe" ? sweExperience : aiExperience;
-  const currentSkills = profile === "swe" ? sweSkills : aiSkills;
   const currentProjects = profile === "swe" ? sweProjects : aiProjects;
-
 
   return (
     <div className="resume-page">
@@ -217,13 +224,13 @@ export function ResumePage() {
               <span className="italic">Lamichhane</span>
             </h1>
             <p className="resume-headline">
-              {profile === "swe" ? "Software Engineer" : "Generative AI Expert & Content Creator"} · Kathmandu, Nepal
+              {profile === "swe" ? "Software Engineer" : "AI Creative · AI Filmmaker"} · Kathmandu, Nepal
             </p>
             
             <motion.div className="resume-profile-toggle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
               <div className="toggle-pill">
                 <button className={`toggle-btn ${profile === "swe" ? "active" : ""}`} onClick={() => setProfile("swe")}>Software Engineer</button>
-                <button className={`toggle-btn ${profile === "ai" ? "active" : ""}`} onClick={() => setProfile("ai")}>Generative AI Expert</button>
+                <button className={`toggle-btn ${profile === "ai" ? "active" : ""}`} onClick={() => setProfile("ai")}>AI Creative</button>
               </div>
             </motion.div>
           </div>
@@ -233,7 +240,7 @@ export function ResumePage() {
             <a href="https://d-shishir.github.io/" target="_blank" rel="noreferrer" className="resume-contact-item">d-shishir.github.io</a>
             <a href="https://github.com/d-shishir" target="_blank" rel="noreferrer" className="resume-contact-item">github.com/d-shishir</a>
             <a href="https://www.linkedin.com/in/dshishir13" target="_blank" rel="noreferrer" className="resume-contact-item">linkedin.com/in/dshishir13</a>
-            <a href="https://x.com/shishirai_" target="_blank" rel="noreferrer" className="resume-contact-item">x.com/shishirai_</a>
+            <a href="https://x.com/shishirdotai" target="_blank" rel="noreferrer" className="resume-contact-item">x.com/shishirdotai</a>
           </div>
         </motion.div>
 
@@ -242,7 +249,7 @@ export function ResumePage() {
           <p>
             {profile === "swe" 
               ? "Results-driven Software Engineer with expertise in full-stack and mobile application development. Experienced in building responsive UIs with React and React Native, and designing robust backend architectures using Django and FastAPI. Adept at integrating REST APIs, troubleshooting complex systems, and bridging the gap between engineering and user experience to deliver high-quality, scalable applications." 
-              : "Proficient with vibe coding and generative AI workflows with a background in software engineering, transitioning into AI content creation. Recognized member of the Kling AI Elite Creators Program (ECP), expert in cinematic video generation and viral content strategy across multiple AI-focused social channels."}
+              : "AI Creative and filmmaker with a software engineering background, specializing in AI filmmaking, cinematic storytelling, visual development, character-driven narratives, and short-form content. Experienced across the latest generation of AI video, image, audio, and multimodal models, with the ability to develop complete creative workflows from concept and story development to visual direction, generation, and final narrative production. Member of the Kling AI Elite Creators Program (ECP) and creator/program partner with multiple AI companies. Built AI-first social media brands with a multi-platform audience of 100K+ followers and content reaching millions of views."}
           </p>
         </motion.div>
 
@@ -271,8 +278,94 @@ export function ResumePage() {
 
         <div className="resume-divider" />
 
-        {/* Education */}
+        {/* Creator Programs & Industry Collaborations (AI profile only) */}
+        {profile === "ai" && (
+          <>
+            <motion.section className="resume-section" custom={1.5} variants={fadeUp} initial="hidden" animate="visible">
+              <h2 className="resume-section-heading">Creator Programs & Industry Collaborations</h2>
+              {creatorCollaborations.map((collab, i) => (
+                <div key={i} className="resume-entry" style={{ marginBottom: "1rem" }}>
+                  <div className="resume-entry-title">{collab.title}</div>
+                  <p style={{ color: "#a1a1aa", fontSize: "0.95rem", marginTop: "0.25rem", lineHeight: 1.5 }}>
+                    {collab.desc}
+                  </p>
+                </div>
+              ))}
+            </motion.section>
+            <div className="resume-divider" />
+          </>
+        )}
+
+        {/* Projects / AI Creative Portfolio */}
         <motion.section className="resume-section" custom={2} variants={fadeUp} initial="hidden" animate="visible">
+          <h2 className="resume-section-heading">
+            {profile === "swe" ? "Projects" : "AI Creative Portfolio"}
+          </h2>
+          <div className="resume-projects-list">
+            {currentProjects.map((p, i) => (
+              <div key={i} className="resume-project-item">
+                <div className="resume-project-header">
+                  <span className="resume-project-name">{p.name}</span>
+                  <a href={`https://${p.url}`} target="_blank" rel="noreferrer" className="resume-project-url">{p.url} ↗</a>
+                </div>
+                <p className="resume-project-desc">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        <div className="resume-divider" />
+
+        {/* Skills / Capabilities */}
+        <motion.section className="resume-section" custom={3} variants={fadeUp} initial="hidden" animate="visible">
+          <h2 className="resume-section-heading">
+            {profile === "swe" ? "Technical Skills" : "Creative Capabilities"}
+          </h2>
+          <div className="resume-skills-table">
+            {(profile === "swe" ? sweSkills : aiCapabilities).map((s) => (
+              <div key={s.label} className="resume-skill-row">
+                <span className="resume-skill-label">{s.label}</span>
+                <span className="resume-skill-value">{s.value}</span>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        <div className="resume-divider" />
+
+        {/* AI Tools & Models + Technical Background (AI profile only) */}
+        {profile === "ai" && (
+          <>
+            <motion.section className="resume-section" custom={3.5} variants={fadeUp} initial="hidden" animate="visible">
+              <h2 className="resume-section-heading">AI Tools & Models</h2>
+              <div className="resume-skills-table">
+                {aiToolsAndModels.map((s) => (
+                  <div key={s.label} className="resume-skill-row">
+                    <span className="resume-skill-label">{s.label}</span>
+                    <span className="resume-skill-value">{s.value}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
+            <div className="resume-divider" />
+
+            <motion.section className="resume-section" custom={3.8} variants={fadeUp} initial="hidden" animate="visible">
+              <h2 className="resume-section-heading">Technical Background</h2>
+              <div className="resume-skills-table">
+                {technicalBackground.map((s) => (
+                  <div key={s.label} className="resume-skill-row">
+                    <span className="resume-skill-label">{s.label}</span>
+                    <span className="resume-skill-value">{s.value}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
+            <div className="resume-divider" />
+          </>
+        )}
+
+        {/* Education */}
+        <motion.section className="resume-section" custom={4} variants={fadeUp} initial="hidden" animate="visible">
           <h2 className="resume-section-heading">Education</h2>
           {education.map((edu, i) => (
             <div key={i} className="resume-entry">
@@ -290,41 +383,6 @@ export function ResumePage() {
               </ul>
             </div>
           ))}
-        </motion.section>
-
-        <div className="resume-divider" />
-
-        {/* Skills */}
-        <motion.section className="resume-section" custom={3} variants={fadeUp} initial="hidden" animate="visible">
-          <h2 className="resume-section-heading">Technical Skills</h2>
-          <div className="resume-skills-table">
-            {currentSkills.map((s) => (
-              <div key={s.label} className="resume-skill-row">
-                <span className="resume-skill-label">{s.label}</span>
-                <span className="resume-skill-value">{s.value}</span>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        <div className="resume-divider" />
-
-        {/* Projects */}
-        <motion.section className="resume-section" custom={4} variants={fadeUp} initial="hidden" animate="visible">
-          <h2 className="resume-section-heading">
-            {profile === "swe" ? "Projects" : "AI Content Portfolio"}
-          </h2>
-          <div className="resume-projects-list">
-            {currentProjects.map((p, i) => (
-              <div key={i} className="resume-project-item">
-                <div className="resume-project-header">
-                  <span className="resume-project-name">{p.name}</span>
-                  <a href={`https://${p.url}`} target="_blank" rel="noreferrer" className="resume-project-url">{p.url} ↗</a>
-                </div>
-                <p className="resume-project-desc">{p.desc}</p>
-              </div>
-            ))}
-          </div>
         </motion.section>
 
         <div className="resume-divider" />
@@ -352,3 +410,4 @@ export function ResumePage() {
     </div>
   );
 }
+
