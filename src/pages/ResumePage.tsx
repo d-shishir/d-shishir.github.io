@@ -168,17 +168,6 @@ const aiProjects = [
   },
 ];
 
-const creatorCollaborations = [
-  {
-    title: "Kling AI — Elite Creators Program (ECP)",
-    desc: "Selected member of the Kling AI Elite Creators Program, producing advanced AI-generated content and cinematic productions while exploring emerging video-generation capabilities.",
-  },
-  {
-    title: "Creator / CPP Programs",
-    desc: "Kinovi AI · OiiOii AI · HappyHorse AI · Pollo AI · Flova AI · ImagineArt — Collaborating with emerging AI platforms and creator programs to explore new generative models, creative workflows, and applications of AI in visual storytelling.",
-  },
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
   visible: (i: number) => ({
@@ -278,19 +267,33 @@ export function ResumePage() {
 
         <div className="resume-divider" />
 
-        {/* Creator Programs & Industry Collaborations (AI profile only) */}
+        {/* Creator Programs (AI profile only) */}
         {profile === "ai" && (
           <>
             <motion.section className="resume-section" custom={1.5} variants={fadeUp} initial="hidden" animate="visible">
-              <h2 className="resume-section-heading">Creator Programs & Industry Collaborations</h2>
-              {creatorCollaborations.map((collab, i) => (
-                <div key={i} className="resume-entry" style={{ marginBottom: "1rem" }}>
-                  <div className="resume-entry-title">{collab.title}</div>
-                  <p style={{ color: "#a1a1aa", fontSize: "0.95rem", marginTop: "0.25rem", lineHeight: 1.5 }}>
-                    {collab.desc}
-                  </p>
+              <h2 className="resume-section-heading">Creator Programs</h2>
+              
+              <div className="resume-entry" style={{ marginBottom: "1.25rem" }}>
+                <div className="resume-entry-title">Creative Partner Programs (CPP)</div>
+                <div className="resume-entry-sub" style={{ marginTop: "0.2rem", marginBottom: "0.4rem" }}>
+                  <a href="https://kinovi.ai" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>Kinovi AI</a> <span className="resume-entry-dot">·</span>{" "}
+                  <a href="https://oiioii.ai" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>OiiOii AI</a> <span className="resume-entry-dot">·</span>{" "}
+                  <a href="https://happy-horse.art" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>HappyHorse AI</a> <span className="resume-entry-dot">·</span>{" "}
+                  <a href="https://pollo.ai" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>Pollo AI</a> <span className="resume-entry-dot">·</span>{" "}
+                  <a href="https://flova.ai" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>Flova AI</a> <span className="resume-entry-dot">·</span>{" "}
+                  <a href="https://imagine.art" target="_blank" rel="noreferrer" className="resume-project-url" style={{ textDecoration: "none" }}>ImagineArt</a>
                 </div>
-              ))}
+                <p style={{ color: "#a1a1aa", fontSize: "0.95rem", lineHeight: 1.5, marginTop: "0.25rem" }}>
+                  Creative Partner across leading AI platforms, working with emerging generative AI models and technologies to explore new possibilities in <strong>AI filmmaking, visual storytelling, and creative production</strong>.
+                </p>
+              </div>
+
+              <div className="resume-entry">
+                <div className="resume-entry-title">Kling AI — Elite Creators Program (ECP)</div>
+                <p style={{ color: "#a1a1aa", fontSize: "0.95rem", lineHeight: 1.5, marginTop: "0.25rem" }}>
+                  Selected as an <strong>Elite Creator</strong> within Kling AI's creator ecosystem, producing advanced AI-generated content and cinematic productions while exploring the platform's latest video-generation capabilities.
+                </p>
+              </div>
             </motion.section>
             <div className="resume-divider" />
           </>
