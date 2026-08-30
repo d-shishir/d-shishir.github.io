@@ -109,7 +109,8 @@ const aiCapabilities = [
 ];
 
 const aiToolsAndModels = [
-  { label: "AI Video", value: "Kling · Google Veo · Hailuo · Seedance · Wan · Higgsfield · Luma · Other emerging video-generation models" },
+  { label: "AI Video Models", value: "Kling · Google Veo · Hailuo · Seedance · Wan · HappyHorse AI · Luma · Other emerging video-generation models" },
+  { label: "AI Platforms & Tools", value: "Higgsfield · ComfyUI · Generative video & creation platforms" },
   { label: "AI Image & Visuals", value: "Nano Banana · Midjourney · ComfyUI · Other generative image workflows" },
   { label: "AI Audio", value: "ElevenLabs · AI voice generation · AI-assisted audio workflows" },
   { label: "Creative AI Workflows", value: "Prompt engineering · Multimodal workflows · Reference-based generation · Model evaluation · AI production pipelines · Rapid creative iteration" },
